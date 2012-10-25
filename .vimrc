@@ -78,6 +78,8 @@ filetype plugin indent on
 "  GUI configuration options
 " ------------------------------------------------------------------
 set guioptions-=T
+set guioptions-=r
+set guioptions-=L
 set guifont=Monaco:h10
 set noantialias
 " ------------------------------------------------------------------
@@ -146,8 +148,8 @@ au BufWinEnter * let w:m5=matchadd('ErrorMsg', 'hole', -1)
 " ------------------------------------------------------------------
  " Remember last location in file, but not for commit messages.
   " see :help last-position-jump
-  au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g`\"" | endif
+au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
+  \| exe "normal! g`\"" | endif
 " ------------------------------------------------------------------
 
 " ------------------------------------------------------------------
