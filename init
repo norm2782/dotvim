@@ -1,2 +1,9 @@
 git submodule init
 git submodule update
+if [ -f ~/.vimrc ];
+then
+  echo "You already have a .vimrc. Please symlink manually if you want to override it."
+else
+  ln -s ~/.vim/.vimrc ~/.vimrc
+  echo "~/.vimrc symlink successfully created."
+fi
