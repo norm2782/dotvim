@@ -1,5 +1,10 @@
 git submodule init
 git submodule update
+if [ ! -f _temp ];
+then
+  mkdir _temp
+fi
+
 if [ -f ~/.vimrc ];
 then
   echo "You already have a .vimrc. Please symlink manually if you want to override it."
