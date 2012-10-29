@@ -125,6 +125,9 @@ setlocal omnifunc=necoghc#omnifunc
 au BufNewFile,BufRead *.{cag,hsc,chs,core*} set filetype=haskell
 au BufNewFile,BufRead *.lhs  set filetype=tex
 au BufNewFile,BufRead *.{cjs,mjs} set filetype=javascript
+
+au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
+au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
 " ------------------------------------------------------------------
 
 " ------------------------------------------------------------------
