@@ -7,6 +7,7 @@ syntax on
 set nocompatible      " Use vim, no vi defaults
 set number            " Show line numbers
 set ruler             " Show line and column number
+set colorcolumn=80    " Show vertical line at 80 characters
 syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8
 " ------------------------------------------------------------------
@@ -139,7 +140,6 @@ au FileType make setlocal noexpandtab
 " ------------------------------------------------------------------
 "  Highlighting for long lines and certain keywords
 " ------------------------------------------------------------------
-au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%<111v.\%>80v', -1)
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', 'TODO', -1)
 au BufWinEnter * let w:m3=matchadd('ErrorMsg', 'FIXME', -1)
 au BufWinEnter * let w:m4=matchadd('ErrorMsg', 'undefined', -1)
