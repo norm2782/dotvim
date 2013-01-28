@@ -1,5 +1,18 @@
 call pathogen#infect()
 
+function! GetRunningOS()
+  if has("win32")
+    return "win"
+  endif
+  if has("unix")
+    if system('uname')=~'Darwin'
+      return "mac"
+    else
+      return "linux"
+    endif
+  endif
+endfunction
+
 " ------------------------------------------------------------------
 "  General vim config
 " ------------------------------------------------------------------
@@ -81,7 +94,13 @@ filetype plugin indent on
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
-set guifont=Monaco:h10
+
+if GetRunningOS() == "mac"
+  set guifont=Monaco:h10
+else
+  set guifont=Courier\ New\ 10
+endif
+
 set noantialias
 " ------------------------------------------------------------------
 
