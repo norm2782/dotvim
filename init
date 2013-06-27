@@ -5,6 +5,11 @@ then
   mkdir _temp
 fi
 
+if [ ! -f _backup ];
+then
+  mkdir _backup
+fi
+
 if [ -f ~/.vimrc ];
 then
   echo "You already have a .vimrc. Please symlink manually if you want to override it."
