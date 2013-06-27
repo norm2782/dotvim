@@ -29,7 +29,7 @@ set encoding=utf-8    " Set default encoding to UTF-8
 "  Whitespace
 " ------------------------------------------------------------------
 set nowrap                        " don't wrap lines
-set tabstop=2                     " a tab is two spaces
+set tabstop=4                     " a tab is four spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
@@ -207,4 +207,17 @@ imap <leader>/ <Esc><plug>NERDCommenterToggle<CR>i
 "  NERDTree config
 " ------------------------------------------------------------------
 map <leader>n :NERDTreeToggle<CR>
+" ------------------------------------------------------------------
+
+" ------------------------------------------------------------------
+"  LaTeX config
+" ------------------------------------------------------------------
+let g:Tex_ViewRule_ps = ''
+let g:Tex_ViewRule_pdf = 'open -a Preview.app'
+let g:Tex_ViewRule_dvi = ''
+let g:Tex_DefaultTargetFormat = 'pdf'
+
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+set iskeyword+=:
 " ------------------------------------------------------------------
