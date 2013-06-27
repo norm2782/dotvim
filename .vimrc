@@ -157,16 +157,6 @@ au FileType make setlocal noexpandtab
 " ------------------------------------------------------------------
 
 " ------------------------------------------------------------------
-"  Highlighting for long lines and certain keywords
-" ------------------------------------------------------------------
-au BufWinEnter * let w:m2=matchadd('ErrorMsg', 'TODO', -1)
-au BufWinEnter * let w:m3=matchadd('ErrorMsg', 'FIXME', -1)
-au BufWinEnter * let w:m4=matchadd('ErrorMsg', 'undefined', -1)
-au BufWinEnter * let w:m5=matchadd('ErrorMsg', 'undef', -1)
-au BufWinEnter * let w:m6=matchadd('ErrorMsg', 'hole', -1)
-" ------------------------------------------------------------------
-
-" ------------------------------------------------------------------
 "  Git-specific configuration
 " ------------------------------------------------------------------
  " Remember last location in file, but not for commit messages.
