@@ -23,6 +23,11 @@ set ruler             " Show line and column number
 set colorcolumn=80    " Show vertical line at 80 characters
 syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8
+set noswapfile
+set vb
+set synmaxcol=500
+
+
 " ------------------------------------------------------------------
 
 " ------------------------------------------------------------------
@@ -96,7 +101,7 @@ set guioptions-=r
 set guioptions-=L
 
 if GetRunningOS() == "mac"
-  set guifont=Monaco:h10
+  set guifont=Hack:h10
 else
   set guifont=Courier\ New\ 10
 endif

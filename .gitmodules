@@ -97,3 +97,6 @@
 [submodule "bundle/vim-clean"]
 	path = bundle/vim-clean
 	url = git://github.com/norm2782/vim-clean.git
+[submodule "bundle/undotree"]
+	path = bundle/undotree
+	url = git@github.com:mbbill/undotree.git
