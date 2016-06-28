@@ -91,9 +91,6 @@
 [submodule "bundle/vimshell"]
 	path = bundle/vimshell
 	url = git://github.com/Shougo/vimshell.git
-[submodule "bundle/vim-latex"]
-	path = bundle/vim-latex
-	url = git@github.com:vim-latex/vim-latex.git
 [submodule "bundle/vim-clean"]
 	path = bundle/vim-clean
 	url = git://github.com/norm2782/vim-clean.git
@@ -106,3 +103,6 @@
 [submodule "bundle/idris-vim"]
 	path = bundle/idris-vim
 	url = git@github.com:idris-hackers/idris-vim.git
+[submodule "bundle/vimtex"]
+	path = bundle/vimtex
+	url = git@github.com:lervag/vimtex.git
