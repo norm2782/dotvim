@@ -23,8 +23,7 @@ set ruler             " Show line and column number
 set colorcolumn=80    " Show vertical line at 80 characters
 syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8
-set noswapfile
-set vb
+set visualbell
 set synmaxcol=500
 
 
@@ -34,9 +33,8 @@ set synmaxcol=500
 "  Whitespace
 " ------------------------------------------------------------------
 set nowrap                        " don't wrap lines
-set tabstop=4                     " a tab is four spaces
+set tabstop=2                     " a tab is four spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
-set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
 " ------------------------------------------------------------------
@@ -205,14 +203,6 @@ map <leader>n :NERDTreeToggle<CR>
 " ------------------------------------------------------------------
 
 " ------------------------------------------------------------------
-"  LaTeX config
+"  Ag config
 " ------------------------------------------------------------------
-let g:Tex_ViewRule_ps = ''
-let g:Tex_ViewRule_pdf = 'open -a Preview.app'
-let g:Tex_ViewRule_dvi = ''
-let g:Tex_DefaultTargetFormat = 'pdf'
-
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
-set iskeyword+=:
-" ------------------------------------------------------------------
+let g:ackprg = 'ag --vimgrep'
