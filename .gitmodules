@@ -78,10 +78,7 @@
 	url = git://github.com/Shougo/vimproc.git
 [submodule "bundle/ghcmod-vim"]
 	path = bundle/ghcmod-vim
-	url = git://github.com/eagletmt/ghcmod-vim.git
-[submodule "bundle/vim2hs"]
-	path = bundle/vim2hs
-	url = git://github.com/dag/vim2hs.git
+	url = git@github.com:eagletmt/ghcmod-vim.git
 [submodule "bundle/vim-eunuch"]
 	path = bundle/vim-eunuch
 	url = git://github.com/tpope/vim-eunuch.git
@@ -106,3 +103,21 @@
 [submodule "bundle/vimtex"]
 	path = bundle/vimtex
 	url = git@github.com:lervag/vimtex.git
+[submodule "bundle/neocomplete.vim"]
+	path = bundle/neocomplete.vim
+	url = git@github.com:Shougo/neocomplete.vim.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = git@github.com:godlygeek/tabular.git
+[submodule "bundle/vim-snipmate"]
+	path = bundle/vim-snipmate
+	url = git@github.com:garbas/vim-snipmate.git
+[submodule "bundle/tlib_vim"]
+	path = bundle/tlib_vim
+	url = git@github.com:tomtom/tlib_vim.git
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
+	url = git@github.com:MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = git@github.com:honza/vim-snippets.git
