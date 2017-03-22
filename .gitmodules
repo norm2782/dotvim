@@ -94,9 +94,6 @@
 [submodule "bundle/undotree"]
 	path = bundle/undotree
 	url = git@github.com:mbbill/undotree.git
-[submodule "bundle/elm.vim"]
-	path = bundle/elm.vim
-	url = git@github.com:lambdatoast/elm.vim.git
 [submodule "bundle/idris-vim"]
 	path = bundle/idris-vim
 	url = git@github.com:idris-hackers/idris-vim.git
