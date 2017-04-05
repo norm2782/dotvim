@@ -1,5 +1,3 @@
-call pathogen#infect()
-
 function! GetRunningOS()
   if has("win32")
     return "win"
@@ -12,6 +10,26 @@ function! GetRunningOS()
     endif
   endif
 endfunction
+
+function! IsWin()
+  return GetRunningOS() == "win"
+endfunction
+
+function! IsMac()
+  return GetRunningOS() == "mac"
+endfunction
+
+function! IsLinux()
+  return GetRunningOS() == "linux"
+endfunction
+
+if IsWin()
+  let &runtimepath.=',$HOME/.vim'
+endif
+
+execute pathogen#infect()
+
+filetype plugin indent on
 
 " ------------------------------------------------------------------
 "  General vim config
@@ -29,6 +47,7 @@ set synmaxcol=500
 set modeline
 set history=1000
 set cmdheight=1
+set expandtab
 
 " ------------------------------------------------------------------
 
@@ -93,8 +112,13 @@ set wildignore+=*.swp,*~,._*
 " ------------------------------------------------------------------
 "  Backgrup and swap files
 " ------------------------------------------------------------------
-set backupdir=~/.vim/_backup//    " where to put backup files.
-set directory=~/.vim/_temp//      " where to put swap files.
+if IsWin()
+  set backupdir=c:/workspace/vim80/_backup/    " where to put backup files.
+  set directory=c:/workspace/vim80/_temp/      " where to put swap files.
+else
+  set backupdir=~/.vim/_backup/    " where to put backup files.
+  set directory=~/.vim/_temp/      " where to put swap files.
+endif
 " ------------------------------------------------------------------
 
 " ------------------------------------------------------------------
@@ -112,7 +136,7 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=L
 
-if GetRunningOS() == "mac"
+if IsMac()
   set guifont=Hack:h10
 else
   set guifont=Courier\ New\ 10
@@ -285,6 +309,5 @@ map <silent> <Leader>t :CtrlP()<CR>
 noremap <leader>b<space> :CtrlPBuffer<cr>
 let g:ctrlp_custom_ignore = '\v[\/]dist$'
 " ------------------------------------------------------------------
-
 
 autocmd FileType haskell set expandtab
