@@ -165,12 +165,14 @@ set wildmode=longest,list,full
 "  Solarized Colorscheme Config
 " ------------------------------------------------------------------
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set background=dark
-colorscheme solarized
 
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
+  let g:solarized_termcolors=256
 endif
+
+set background=dark
+colorscheme solarized
 
 " ------------------------------------------------------------------
 
