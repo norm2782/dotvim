@@ -138,6 +138,8 @@ set guioptions-=L
 
 if IsMac()
   set guifont=Hack:h10
+elseif
+  set guifont=Hack\ 10
 else
   set guifont=Courier\ New\ 10
 endif
