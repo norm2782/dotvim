@@ -76,9 +76,6 @@
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc
 	url = git://github.com/Shougo/vimproc.git
-[submodule "bundle/ghcmod-vim"]
-	path = bundle/ghcmod-vim
-	url = git@github.com:eagletmt/ghcmod-vim.git
 [submodule "bundle/vim-eunuch"]
 	path = bundle/vim-eunuch
 	url = git://github.com/tpope/vim-eunuch.git
